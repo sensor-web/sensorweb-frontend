@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Documentation</title>
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <ul id="dropdown" class="dropdown-content">
+    <li><a href="about.html">English Version</a></li>
+    <li class="divider"></li>
+    <li><a href="tw/about.html">中文版</a></li>
+  </ul>
+  <div class="navbar-fixed">
+    <nav class="teal" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="/" class="brand-logo">SensorWeb</a>
+
+        <ul class="right hide-on-med-and-down">
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <!-- Dropdown Trigger -->
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown">EN<i id="arrow" class="material-icons right">arrow_drop_down</i></a></li>
+          <li class="login"><a href="user-detail.html">Log In</a></li>
+          <!-- <li>
+            <div id="tabzilla">
+              <a href="https://www.mozilla.org/en-US/" data-link-type="nav" data-link-name="tabzilla">Mozilla</a>
+            </div>
+          </li> -->
+        </ul>
+
+        <!-- Mobile Navigation -->
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="about.html">About</a></li>
+          <li><a href="pilot-project.html">Projects</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="user-detail.html">Log In</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+
+      </div>
+    </nav>
+  </div>
+
+  <div class="container projects">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 m3">
+          <div class="collection">
+            <a href="#!" class="collection-item active">Push Sensor Data Under sensor_id</a>
+          </div>
+        </div>
+        <div class="col s12 m9 col-right">
+
+<h1>REST API Reference</h1>
+<h2>Push Sensor Data Under <code>sensor_id</code></h2>
+<p>After you [logged in][login] and created a sensor device, you can start to send data to SensorWeb with your <code>api_key</code> and <code>sensor_id</code>.</p>
+<h3>Request</h3>
+<p><strong>POST</strong> <code>http://api.sensorweb.io/sensors/{sensor_id}/data/</code></p>
+<p><code>?api_key={api_key}&amp;pm2_5={pm2.5_value}</code></p>
+<p><strong>Parameters</strong>
+<em> <code>sensor_id</code>: Your sensor id, you can find it in [your dashboard][profile].
+</em> <code>api_key</code>: Your API key to access SensorWeb, you can find it in [your dashboard][profile].
+* <code>pm2_5</code>: PM sensor reading in µg/m³.</p>
+<p><strong>Headers</strong>
+<code>Content-Type: application/x-www-form-urlencoded
+Accept: application/json</code></p>
+<h3>Response</h3>
+<p><code>{
+  "name": "My First PM2.5 Sensor",
+  "description": "It's in my work place'",
+  "address": "No. 106, Section 5, Xinyi Rd, Taipei City, Taiwan 110",
+  "coordinates": "120.982025, 23.973875",
+  "latest_update": {
+    "datetime": "2013-08-25T17:10:00+00:00",
+    "pm2_5": 11
+  }
+}</code></p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l3 s12">
+          <a href="http://mozilla.org" target="_blank"><img class="logo-mozilla" src="images/footer-mozilla-white.png"/></a>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text head">SensorWeb</h5>
+          <ul>
+            <li><a class="white-text" href="about.html">About</a></li>
+            <li><a class="white-text" href="projects.html">Projects</a></li>
+            <li><a class="white-text" href="documentation.html">Documentation</a></li>
+            <li><a class="white-text" href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text head">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="https://github.com/sensor-web" target="_blank">GitHub</a></li>
+            <li><a class="white-text" href="https://wiki.mozilla.org/SensorWeb" target="_blank">Wiki</a></li>
+            <li><a class="white-text" href="https://wiki.mozilla.org/Connected_Devices/Participation" target="_blank">Participation</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text head">Contact Us</h5>
+          <ul>
+            <li><a class="white-text" href="mailto:sensorweb@mozilla.com" target="_blank">sensorweb@mozilla.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/documentation.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-75308712-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
