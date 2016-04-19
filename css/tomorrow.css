@@ -79,6 +79,22 @@ ul li {
   margin-left: 1em;
 }
 
-.collection .collection-item.active {
-  letter-spacing: -0.6px;
+h2:before, h3:before {
+  content:"";
+  display:block;
+  height:90px; /* fixed header height*/
+  margin:-90px 0 0;
+}
+
+.toc {
+  height: 1px;
+  white-space: nowrap;
+}
+
+.toc .collection {
+  display: inline-block;
+}
+
+hr {
+  width: 100%;
 }

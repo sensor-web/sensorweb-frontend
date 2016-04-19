@@ -56,31 +56,35 @@
   <div class="container projects">
     <div class="section">
       <div class="row">
-        <div class="col s12 m3">
+        <div class="col s12 m3 toc">
           <div class="collection">
-            <a href="#post-sensor-data" class="collection-item active">POST /sensors/{sensor_id}/data</a>
+            <a href="#api-reference" class="collection-item active">API Reference</a>
+            <a href="#post-sensor-data" class="collection-item">POST /sensors/{sensor_id}/data</a>
           </div>
         </div>
         <div class="col s12 m9 col-right">
 
-<h2>REST API Reference</h2>
+<h2 id="api-reference">REST API Reference</h2>
+<p>Currently we only expose API for sensor devices to push data to SensorWeb. </p>
+<p>Stay tuned for query APIs.</p>
+<hr />
 <h3 id="post-sensor-data">POST /sensors/<code>sensor_id</code>/data</h3>
-<p>After you [logged in][login] and created a sensor device, you can start to send data to SensorWeb with your <code>api_key</code> and <code>sensor_id</code>.</p>
+<p>After you <a href="http://sensorweb.io/#login">logged in</a> and created a sensor device, you can start to send data to SensorWeb with your <code>api_key</code> and <code>sensor_id</code>.</p>
 <h4>Request</h4>
 <p><strong>POST</strong> <code>http://api.sensorweb.io/sensors/{sensor_id}/data/</code></p>
 <pre><code>?api_key={api_key}&amp;pm2_5={pm2.5_value}
 </code></pre>
-<p><strong>Parameters</strong></p>
+<h5>Parameters</h5>
 <ul>
-<li><code>sensor_id</code>: Your sensor id, you can find it in [your dashboard][profile]</li>
-<li><code>api_key</code>: Your API key to access SensorWeb, you can find it in [your dashboard][profile]</li>
+<li><code>sensor_id</code>: Your sensor id, you can find it in <a href="http://sensorweb.io/user-detail.html">your dashboard</a></li>
+<li><code>api_key</code>: Your API key to access SensorWeb, you can find it in <a href="http://sensorweb.io/user-detail.html">your dashboard</a></li>
 <li><code>pm2_5</code>: PM sensor reading in µg/m³</li>
 </ul>
-<p><strong>Headers</strong></p>
+<h5>Headers</h5>
 <pre><code>Content-Type: application/x-www-form-urlencoded
 Accept: application/json
 </code></pre>
-<h3>Response</h3>
+<h4>Response</h4>
 <pre><code>{
     "name": "My First PM2.5 Sensor",
     "description": "It's in my work place'",
@@ -92,6 +96,7 @@ Accept: application/json
     }
 }
 </code></pre>
+<hr />
 
         </div>
       </div>
@@ -141,6 +146,9 @@ Accept: application/json
 
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.min.js"></script>
+  <script src="js/jquery.scrollTo.min.js"></script>
+  <script src="js/jquery.localScroll.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>

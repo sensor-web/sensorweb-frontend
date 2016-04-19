@@ -56,9 +56,10 @@
   <div class="container projects">
     <div class="section">
       <div class="row">
-        <div class="col s12 m3">
+        <div class="col s12 m3 toc">
           <div class="collection">
-            <a href="#step-1" class="collection-item active">1. Create Account</a>
+            <a href="#getting-started" class="collection-item active">Getting Started</a>
+            <a href="#step-1" class="collection-item">1. Create Account</a>
             <a href="#step-2" class="collection-item">2. Create API Key</a>
             <a href="#step-3" class="collection-item">3. Setup Sensor Station</a>
             <a href="#step-4" class="collection-item">4. See Live Data</a>
@@ -66,13 +67,13 @@
         </div>
         <div class="col s12 m9 col-right">
 
-<h2>Getting Started Guide</h2>
+<h2 id="getting-started">Getting Started Guide</h2>
 <p>SensorWeb aims to pave the way for volunteers who is willing to solve real problems by exposing sensor data to the public. We don't just accept any random data, we encourage and help people work on shared vision together to achieve specific goals.</p>
 <p>For instance, our first initiative is to build a crowdsourcing PM2.5 sensor network. With more data published, people would have better visibility of the air quality in their surroundings. So they can take actions accordingly.</p>
 <p>Not everyone need to be a contributor. But if your do, tons of people would benifit from it. </p>
 <p>Excited? Below are 4 steps to get you started.</p>
 <h3 id="step-1">Step 1: Create Your SensorWeb Account</h3>
-<p>Fill in the <a href="http://sensorweb.io/signup">sign up form</a> or just <a href="http://sensorweb.io/login">login</a> with exsiting account. After logged in, a popup will tell you that you just joined PM2.5 initiative, since it's our only first initiative for now. Click <strong>OK</strong> will bring you to your dashboard.</p>
+<p>Fill in the <a href="http://sensorweb.io/#signup">sign up form</a> or just <a href="http://sensorweb.io/#login">login</a> with exsiting account. After logged in, a popup will tell you that you just joined PM2.5 initiative, since it's our only first initiative for now. Click <strong>OK</strong> will bring you to your dashboard.</p>
 <h3 id="step-2">Step 2: Create a Sensor ID and API Key</h3>
 <p>Click <strong>Add Device</strong>, fill in necessary information about your sensor and submit. You will see your <code>sensor_id</code> and <code>api_key</code> in the sensor detail page.</p>
 <h3 id="step-3">Step 3: Setup Your Sensor Station</h3>
@@ -106,7 +107,7 @@
 <li>Instructions: <a href="https://github.com/sensor-web/pi-station">See instructions on github</a> </li>
 </ul>
 <h4>Using Other Hardware You Prefer</h4>
-<p>If you have other preferred hardware boards, you can build your own and have it send data to our service by calling our <a href="http://sensorweb.io/docs/api-reference">REST API</a>.</p>
+<p>If you have other preferred hardware boards, you can build your own and have it send data to our service by calling our <a href="http://sensorweb.io/api-reference.html">REST API</a>.</p>
 <h3 id="step-4">Step 4: See Your Live Data</h3>
 <p>After setting up your sensor station properly, it should begin to send data to SensorWeb. Go back to the sensor detail page you just created in <a href="#step2">step 2</a>, you'll see your data being visualized and updated in realtime.</p>
 
@@ -158,6 +159,9 @@
 
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.min.js"></script>
+  <script src="js/jquery.scrollTo.min.js"></script>
+  <script src="js/jquery.localScroll.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
