@@ -58,10 +58,10 @@
       <div class="row">
         <div class="col s12 m3">
           <div class="collection">
-            <a href="#!" class="collection-item active">1. Create Account</a>
-            <a href="#!" class="collection-item">2. Create API Key</a>
-            <a href="#!" class="collection-item">3. Setup Sensor Station</a>
-            <a href="#!" class="collection-item">4. See Live Data</a>
+            <a href="#step-1" class="collection-item active">1. Create Account</a>
+            <a href="#step-2" class="collection-item">2. Create API Key</a>
+            <a href="#step-3" class="collection-item">3. Setup Sensor Station</a>
+            <a href="#step-4" class="collection-item">4. See Live Data</a>
           </div>
         </div>
         <div class="col s12 m9 col-right">
@@ -71,11 +71,11 @@
 <p>For instance, our first initiative is to build a crowdsourcing PM2.5 sensor network. With more data published, people would have better visibility of the air quality in their surroundings. So they can take actions accordingly.</p>
 <p>Not everyone need to be a contributor. But if your do, tons of people would benifit from it. </p>
 <p>Excited? Below are 4 steps to get you started.</p>
-<h3>Step 1: Create Your SensorWeb Account</h3>
+<h3 id="step-1">Step 1: Create Your SensorWeb Account</h3>
 <p>Fill in the <a href="http://sensorweb.io/signup">sign up form</a> or just <a href="http://sensorweb.io/login">login</a> with exsiting account. After logged in, a popup will tell you that you just joined PM2.5 initiative, since it's our only first initiative for now. Click <strong>OK</strong> will bring you to your dashboard.</p>
-<h3>Step 2: Create a Sensor ID and API Key</h3>
+<h3 id="step-2">Step 2: Create a Sensor ID and API Key</h3>
 <p>Click <strong>Add Device</strong>, fill in necessary information about your sensor and submit. You will see your <code>sensor_id</code> and <code>api_key</code> in the sensor detail page.</p>
-<h3>Step 3: Setup Your Sensor Station</h3>
+<h3 id="step-3">Step 3: Setup Your Sensor Station</h3>
 <p>Currently we provide some basic software to enable various ways to setup your sensor station. It might have frictions for non-developers for now. We will improve the setup process step by step, please <a href="http://blog.sensorweb.io/">stay tuned</a> for upcoming releases.</p>
 <p>A sensor station that integrates with our services should have:</p>
 <ul>
@@ -107,7 +107,7 @@
 </ul>
 <h4>Using Other Hardware You Prefer</h4>
 <p>If you have other preferred hardware boards, you can build your own and have it send data to our service by calling our <a href="http://sensorweb.io/docs/api-reference">REST API</a>.</p>
-<h3>Step 4: See Your Live Data</h3>
+<h3 id="step-4">Step 4: See Your Live Data</h3>
 <p>After setting up your sensor station properly, it should begin to send data to SensorWeb. Go back to the sensor detail page you just created in <a href="#step2">step 2</a>, you'll see your data being visualized and updated in realtime.</p>
 
         </div>
