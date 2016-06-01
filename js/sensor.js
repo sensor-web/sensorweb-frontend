@@ -72,7 +72,7 @@
       zoom: 16,
       streetViewControl: false,
       center: location,
-      scrollwheel: false
+      scrollwheel: false,
     });
     gMap.panBy(0,-100);
 

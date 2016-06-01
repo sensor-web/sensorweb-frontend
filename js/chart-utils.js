@@ -14,7 +14,8 @@
           pointHoverBorderWidth: 0,
           pointBackgroundColor: '#5cc7B9',
           pointHoverBackgroundColor: '#1cbcad',
-          fill: true
+          fill: true,
+          tension: 0.2,
         }]
       },
       options: {
@@ -55,9 +56,10 @@
             },
             time: {
               round: true,
-              unitStepSize: 100,
+              unit: 'hour',
+              unitStepSize: 1,
               displayFormats: {
-                'hour': 'MMM D, HH'
+                'hour': 'h:mm a'
               }
             }
           } ],

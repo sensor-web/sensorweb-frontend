@@ -31,7 +31,7 @@
 
   var gMap;
   var markerMap = new Map();
-
+  var flag = false;
 
   var dataChartContainer =
     document.getElementById('sensor-data-chart-container');
@@ -49,8 +49,21 @@
     dataChartContainer.classList.add('hide');
     if (dataChart) {
       dataChart.destroy();
+      flag = false;
     }
   });
+
+  $('#sensors-location-map').click(function() {
+    if(flag) {
+      dataChartContainer.classList.add('hide');
+      if (dataChart) {
+        dataChart.destroy();
+        flag = false;
+      }
+    }
+  });
+
+
 
   function dataConvertion(dataArray) {
     var config = ChartUtils.getChartConfig();
@@ -132,6 +145,7 @@
         })
         .done(function(dataArray) {
           dataChart = new Chart(ctx, dataConvertion(dataArray));
+          flag = true;
         })
         .fail(function(error) {
           console.error(error);
@@ -146,7 +160,7 @@
 
     getGeolocation().then(function(pos) {
       gMap.setCenter(pos);
-      gMap.setZoom(11/* TODO: Refine this part to set correct scale*/);
+      gMap.setZoom(16/* TODO: Refine this part to set correct scale*/);
     }, function(e) {
       console.log(e);
     });
